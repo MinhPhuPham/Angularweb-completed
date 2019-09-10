@@ -1,0 +1,46 @@
+<div class="container">
+<h2 id="title">Products List Vew</h2>
+<div class="card border-primary mb-3 mt-3" id="body-lab">
+    <div class="card-header bg-primary">Header</div>
+        <div class="card-body mx-auto">
+            <form action="" class="form-inline">
+                <label for="filter" ng-model="searchText">Filter by:</label>
+                <input type="text" class="form-control ml-5" name="filter" id="filter" [(ngModel)]="searchText">
+            </form>
+
+            <table class="table mt-5 table-responsive" id="searchTextResults">
+                <thead class="text-primary table-borderless thead-light">
+                    <th><button class="btn btn-primary" (click)="changeStatus()">{{visibleImage ? "Hide Image":"Show Image"}}</button></th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Available</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">5 Star Rating</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of listProducts | filter:searchText">
+                        <td>
+                            <img *ngIf="visibleImage" [src]="product.imageURL" alt="" width="40px" height="40px">
+                        </td>
+                        <td>
+                            <a [title]="product.productName + ' details'" [routerLink]="['/exercise/4/products', product.productId]">
+                                {{product.productName}}
+                            </a>
+                        </td>
+                        <td>{{product.code}}</td>
+                        <td>{{product.available}}</td>
+                        <td>{{product.price | currency}}</td>
+                        <td>
+                            <div style="text-align:center">
+                                <star-rating [value]="product.starRating*5" checkedcolor="black" uncheckedcolor="white" size="24px"></star-rating>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+        </div>
+  </div>
+
+</div>
