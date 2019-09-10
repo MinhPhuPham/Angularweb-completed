@@ -1,0 +1,406 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 collapse d-md-flex bg-light pt-2 min-vh-100 bd-sidebar " id="sidebar">
+            <ul class="nav flex-column flex-nowrap">
+                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Reports</a>
+                    <div class="collapse" id="submenu1" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item"><a class="nav-link py-0" href="#">Orders</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link collapsed py-1" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1">Customers</a>
+                                <div class="collapse" id="submenu1sub1" aria-expanded="false">
+                                    <ul class="flex-column nav pl-4">
+                                        <li class="nav-item">
+                                            <a class="nav-link p-1" href="#">
+                                                <i class="fa fa-fw fa-clock-o"></i> Daily
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-1" href="<?= base_url('User/edit_em') ?>">
+                                                <i class="fa fa-fw fa-dashboard"></i> Edit information
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-1" href="#">
+                                                <i class="fa fa-fw fa-bar-chart"></i> Charts
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-1" href="#">
+                                                <i class="fa fa-fw fa-compass"></i> Areas
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link p-1" href="<?= base_url('User/tb_users') ?>">
+                                            <i class="fas fa-bars"></i> Table user
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Export</a></li>
+            </ul>
+        </div>
+
+        <div class="col pt-4" >
+            <div class="tools">
+              <div class="row" style="border-bottom:1px solid #6E6E6E ">
+                    <div class="col-md-8" id="tools-1">
+                       <button type="button"  class="btn tablinks" onclick="card()"><i class=" fa fas fa-th-large  "> Card View</i></button>
+                      <button type="button" class="btn tablinks" onclick="list()"><i class= "fa fas fa-list "> List View</i></button>
+             <button type="button" class="btn tablinks" data-toggle="modal" data-target="#myModal"><i class="fa far fa-plus-square">Add Categories</i></button>
+             <button type="button"  class="btn tablinks" ><i class="fas fa-shopping-cart">Your Cart</i></button>
+
+          </div>
+                    <div class="col-md-4" style="float: left; padding: 5px;">
+                      <input class="form-control" id="myInput" type="text" title="Search information product" placeholder="Search.." style="overflow: hidden; " onkeyup="mysearch()">
+                    </div>
+                    <script>
+                      function mysearch() {
+                        var input, filter, h4,a,i,txtValue;
+                        input=document.getElementById("myInput");
+                        filter=input.value.toUpperCase();
+                        h4 = getElementsByTagName("h4");
+                        for (i = 0; i < h4.length; i++) {
+                        a = h4[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            h4[i].style.display = "";
+                        } else {
+                            h4[i].style.display = "none";
+                        }
+                    }
+                                      } 
+                    </script>
+            </div>
+        </div>
+            <div class="product">
+            <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4" data-name="Product 1" data-price="14.40">
+                        <div class="product-image4" >
+                            <a href="#">
+                                <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image3.jpg">
+                                <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image4.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="<?= base_url('Product/Information')?>" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 1</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                                <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image1.jpg">
+                                <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image2.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-discount-label">-12%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 2</a></h3>
+                            <div class="price">
+                                $17.60
+                                <span>$20.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                            <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image6.jpg">
+                            <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image5.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 3</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                            <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image7.jpg">
+                            <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image8.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 4</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                                <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image3.jpg">
+                                <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image4.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 1</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                                <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image1.jpg">
+                                <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image2.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-discount-label">-12%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 2</a></h3>
+                            <div class="price">
+                                $17.60
+                                <span>$20.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                            <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image6.jpg">
+                            <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image5.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 3</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                            <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image7.jpg">
+                            <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image8.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 4</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                                <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image3.jpg">
+                                <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image4.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 1</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                                <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image1.jpg">
+                                <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image2.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-discount-label">-12%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 2</a></h3>
+                            <div class="price">
+                                $17.60
+                                <span>$20.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                            <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image6.jpg">
+                            <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image5.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 3</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid4">
+                        <div class="product-image4">
+                            <a href="#">
+                            <img class="pic-1" src="<?php echo base_url(); ?>assets/image/image7.jpg">
+                            <img class="pic-2" src="<?php echo base_url(); ?>assets/image/image8.jpg">
+                            </a>
+                            <ul class="social">
+                                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                            <span class="product-new-label">New</span>
+                            <span class="product-discount-label">-10%</span>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Product 4</a></h3>
+                            <div class="price">
+                                $14.40
+                                <span>$16.00</span>
+                            </div>
+                            <a class="add-to-cart" href="">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      <script >
+        function card(){
+          document.getElementById("Card").style.width="400px";
+          document.getElementById("Card2").style.width="400px";
+          document.getElementById("Card3").style.width="400px";
+          document.getElementById("Card4").style.width="400px";
+          document.getElementById("Card5").style.width="400px";
+          document.getElementById("Card6").style.width="400px";
+        }
+        function list(){
+          document.getElementById("Card").style.width="1000px";
+          document.getElementById("Card2").style.width="1000px";
+          document.getElementById("Card3").style.width="1000px";
+          document.getElementById("Card4").style.width="1000px";
+          document.getElementById("Card5").style.width="1000px";
+          document.getElementById("Card6").style.width="1000px";
+        }
+      </script>
