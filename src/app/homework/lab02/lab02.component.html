@@ -1,6 +1,6 @@
 <div class="container">
     <div class="alert alert-dark alert-dismissible fade show">
-        <strong>Dark!</strong> Dark grey alert.
+      Home / <span><a routerLink='/lab02'>student</a></span>
       </div>
       <div class="card border-primary mb-3 mt-3" id="body-lab">
           <div class="card-header bg-primary">
@@ -15,32 +15,25 @@
                 <table class="table" id="searchTextResults">
                         <thead class="thead-light">
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Enroll Date</th>
+                            <th scope="col">Action</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                        <tbody  *ngIf="listStudents.length > 0; else nothing"> 
+                          <tr *ngFor='let student of listStudents | filter:searchText'>
+                              <td>{{ student.firstName }}</td>
+                              <td>{{ student.lastName }}</td>
+                              <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
+                              <td>
+                                  <a [routerLink]="['/student', student.id]">
+                                      <i class="fas fa-info-circle text-primary mr-1"></i>
+                                  </a>
+                                  <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>
+                              </td>
                           </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                        </tbody>
+                      </tbody>
                       </table>
           </div>
       </div>
