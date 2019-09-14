@@ -14,13 +14,13 @@ import { DetailStudentComponent } from './homework/lab02/detail-student/detail-s
 
 const routes: Routes = [
   {path:'', component:ShoppingHomeComponent},
-  {path:'lab01',component:Lab01Component},
-  {path: 'lab02', component:Lab02Component},
+  {path:'homework/lab01',component:Lab01Component},
+  {path: 'homework/lab02', component:Lab02Component},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
 
   {path:'lab01/:productID',component:DetailProductsComponent},
-  { path: 'lab02/student/:id', component: DetailStudentComponent},
+  { path:'lab02/:id', component: DetailStudentComponent},
 
   {path:'wrongpath', component:WrongpathComponent},
   {path:'**', redirectTo: 'wrongpath',pathMatch:'full'}
