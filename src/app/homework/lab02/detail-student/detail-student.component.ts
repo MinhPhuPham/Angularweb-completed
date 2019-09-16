@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 
 import {students} from '../students';
-import {course} from '../course';
-import {enrollments} from '../enrollments'
+// import {course} from '../course';
+// import {enrollments} from '../enrollments'
 
 @Component({
   selector: 'app-detail-student',
@@ -14,6 +14,7 @@ export class DetailStudentComponent implements OnInit {
   
   constructor(private router: ActivatedRoute) { }
   student
+  // enrollments
   listStudents = [...students]
   ngOnInit() {
     this.router.paramMap.subscribe( params => {
@@ -22,6 +23,8 @@ export class DetailStudentComponent implements OnInit {
       this.student = this.listStudents.filter(student => {
         return student.id === id
       })[0]
+      // this.enrollments=this.enrollments.filter()
     })
+  
   }
 }

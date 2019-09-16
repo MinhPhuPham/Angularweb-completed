@@ -24,4 +24,7 @@ export class DetailProductsComponent implements OnInit {
   Onback(){
     window.history.back();
   }
+  Add_cart(){
+    console.log("preparing!")
+  }
 }

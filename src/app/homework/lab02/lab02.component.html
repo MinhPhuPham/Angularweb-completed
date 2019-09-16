@@ -21,7 +21,7 @@
                             <th scope="col">Action</th>
                           </tr>
                         </thead>
-                        <tbody  *ngIf="listStudents.length > 0; else nothing"> 
+                        <tbody  *ngIf="listStudents.length > 0"> 
                           <tr *ngFor='let student of listStudents | filter:searchText | paginate: config'>
                               <td>{{ student.firstName }}</td>
                               <td>{{ student.lastName }}</td>
@@ -30,7 +30,7 @@
                                   <a [routerLink]="['/lab02', student.id]">
                                       <i class="fas fa-info-circle text-primary mr-1"></i>
                                   </a>
-                                  <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>
+                                  <i class="far fa-trash-alt" ></i>
                               </td>
                           </tr>
                       </tbody>
