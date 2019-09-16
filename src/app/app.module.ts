@@ -18,6 +18,9 @@ import { DetailProductsComponent } from './homework/lab01/detail-products/detail
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DetailStudentComponent } from './homework/lab02/detail-student/detail-student.component';
+import { Lab03Component } from './homework/lab03/lab03.component';
+import { PageShoppingComponent } from './homework/lab03/page-shopping/page-shopping.component';
+import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { DetailStudentComponent } from './homework/lab02/detail-student/detail-s
     DetailProductsComponent,
     LoginComponent,
     RegisterComponent,
-    DetailStudentComponent
+    DetailStudentComponent,
+    Lab03Component,
+    PageShoppingComponent,
+    DetailProComponent
   ],
   imports: [
     BrowserModule,
