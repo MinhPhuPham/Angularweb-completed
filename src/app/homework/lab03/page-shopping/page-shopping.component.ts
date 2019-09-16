@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import {product} from '../products'
 @Component({
   selector: 'app-page-shopping',
   templateUrl: './page-shopping.component.html',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class PageShoppingComponent implements OnInit {
 
   constructor() { }
-
+  listProducts=[]
   ngOnInit() {
+    this.listProducts=[...product]
   }
+  
 
 }

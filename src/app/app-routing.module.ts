@@ -8,6 +8,10 @@ import { Lab02Component } from './homework/lab02/lab02.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { Lab03Component } from './homework/lab03/lab03.component';
+import { PageShoppingComponent } from './homework/lab03/page-shopping/page-shopping.component';
+import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.component';
+
 import { DetailProductsComponent } from './homework/lab01/detail-products/detail-products.component';
 import { DetailStudentComponent } from './homework/lab02/detail-student/detail-student.component';
 
@@ -18,6 +22,8 @@ const routes: Routes = [
   {path: 'homework/lab02', component:Lab02Component},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
+  {path: 'homework/lab03', component:Lab03Component},
+  {path:'homework/lab03/page_shopping',component:PageShoppingComponent},
  
   {path:'homework/lab01/detail-product/:productId',component:DetailProductsComponent},
   { path:'lab02/:id', component: DetailStudentComponent},

@@ -1,0 +1,11 @@
+export const product=
+[{"id":1,"pro_name":"carvedilol","price":"$7.57","producer":"France","gender":"BTS Installation",description :"Malaria in the mother, unspecified as to episode of care or not applicable","discount":30},
+{"id":2,"pro_name":"VANCOMYCIN HYDROCHLORIDE","price":"$51.52","producer":"France","gender":"Architectural Illustration",description :"Secondary diabetes mellitus with other specified manifestations, not stated as uncontrolled, or unspecified","discount":20},
+{"id":3,"pro_name":"Benzoyl Peroxide","price":"$31.25","producer":"France","gender":"Rubber",description :"Chronic leukemia of unspecified cell type, in relapse","discount":59},
+{"id":4,"pro_name":"acetic acid","price":"$78.98","producer":"France","gender":"Customer Satisfaction",description :"Other specified hemiplegia and hemiparesis affecting unspecified side","discount":98},
+{"id":5,"pro_name":"Allium cepa, Ambrosia artemisiaefolia, Euphrasia officinalis","price":"$28.46","producer":"France","gender":"Ethernet over SDH",description :"Dementia with lewy bodies","discount":88},
+{"id":6,"pro_name":"Belladonna, Apis mellifica, Argetnum nitricum, Cantharis, Equisetum arvense, Pulsatilla, Sarsaparilla, Terebinthina, Causticum, Petroselinum sativum,","price":"$27.67","producer":"France","gender":"Oxy-acetylene",description :"Ornithosis with pneumonia","discount":29},
+{"id":7,"pro_name":"Standardized Kentucky (June) Bluegrass Pollen","price":"$66.07","producer":"France","gender":"High Net Worth Individuals",description :"Abdominal tenderness, epigastric","discount":23},
+{"id":8,"pro_name":"Carboxymethylcellulose sodium","price":"$49.88","producer":"France","gender":"Business Ideas","description":"Personal history of other disorders of nervous system and sense organs","discount":46},
+{"id":9,"pro_name":"Norfloxacin","price":"$55.37","producer":"France","gender":"OATS","description":"Scar conditions and fibrosis of skin","discount":97},
+{"id":10,"pro_name":"American Cockroach","price":"$32.28","producer":"France","gender":"Peer Tutoring","description":"Papyraceous fetus, delivered, with or without mention of antepartum condition","discount":91}]

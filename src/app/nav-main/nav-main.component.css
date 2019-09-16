@@ -6,3 +6,10 @@
     width: 40px;
     margin:0 50px 0 10px;
 }
+.nav-bar{
+    position: -webkit-sticky;
+    position: sticky;  
+    z-index: 2;
+    height: 50px;
+    top: 0px;
+}
