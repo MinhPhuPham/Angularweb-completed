@@ -20,10 +20,10 @@
                 <tbody>
                     <tr *ngFor="let product of listProducts | filter:searchText">
                         <td>
-                            <img *ngIf="visibleImage" [src]="product.imageURL" alt="" width="40px" height="40px">
+                            <img *ngIf="visibleImage" [src]="product.imageURL" alt="" width="55px" height="55px" style="margin-left: 40px">
                         </td>
                         <td>
-                            <a [title]="product.productName + ' details'" [routerLink]="['/exercise/4/products', product.productId]">
+                            <a [title]="product.productName + ' details'" [routerLink]="['/homework/lab01/detail-product/', product.id  ]">
                                 {{product.productName}}
                             </a>
                         </td>

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RatingModule } from 'ng-starrating';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,7 @@ import { DetailStudentComponent } from './homework/lab02/detail-student/detail-s
     RatingModule,
     Ng2SearchPipeModule,
     FormsModule,
+    MDBBootstrapModule.forRoot(),
     NgxPaginationModule
   ],
   providers: [],

@@ -22,12 +22,12 @@
                           </tr>
                         </thead>
                         <tbody  *ngIf="listStudents.length > 0; else nothing"> 
-                          <tr *ngFor='let student of listStudents | filter:searchText'>
+                          <tr *ngFor='let student of listStudents | filter:searchText | paginate: config'>
                               <td>{{ student.firstName }}</td>
                               <td>{{ student.lastName }}</td>
                               <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
                               <td>
-                                  <a [routerLink]="['/student', student.id]">
+                                  <a [routerLink]="['/lab02', student.id]">
                                       <i class="fas fa-info-circle text-primary mr-1"></i>
                                   </a>
                                   <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>
@@ -35,6 +35,15 @@
                           </tr>
                       </tbody>
                       </table>
+                      <div class="card-footer">
+                        <div class="row">
+                        <div class="col-6">
+                          Showing {{this.config.currentPage}} of {{this.listStudents.length/this.config.itemsPerPage |number:"1.0-0"}}
+                        </div>
+                        <pagination-controls (pageChange)="pageChanged($event)" maxSize="3" class="col-6"></pagination-controls>
+                      </div>
+                    </div>
+                      
           </div>
       </div>
       <div>

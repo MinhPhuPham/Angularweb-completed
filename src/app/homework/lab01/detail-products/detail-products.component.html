@@ -1,3 +1,7 @@
+<div class="container">
+		<div class="alert alert-dark alert-dismissible fade show">
+				Home / <span><a routerLink='/homework/lab01'>Product</a>/ {{product.productName}} </span>
+				</div>
 <div class="detail"  *ngIf="product"> 
 	<div class="card">
 			<div class="card-header alert alert-primary">
@@ -58,16 +62,20 @@
 
 				</div>
 				<div class="img col-sm-5 offset-sm-2">
-					<img [src]="product.imageUrl" alt="" width="250px" height="250px">
+					<img [src]="product.imageURL" alt="" width="250px" height="250px">
 				</div>
 			</div>
 			<div class="card-footer">
-				<a (click)="Onback()">
-					<strong>
-						<span style="font-size: 25px;">&#x2190;</span>
-						Back
-					</strong>
-					</a>
+				<div class="row">
+					<div class="col-6">
+
+							<button mdbBtn type="button" color="primary" size="md" (click)='Onback()' mdbWavesEffect>Back to Page</button>
+					</div>
+					<div class="col-6">
+							<button mdbBtn type="button" gradient="peach" size="md" (click)="Add-to-cart()" style="float: right" mdbWavesEffect>Add To Cart</button>
+					</div>
+				</div>
 			</div>
 	</div>
+</div>
 </div>

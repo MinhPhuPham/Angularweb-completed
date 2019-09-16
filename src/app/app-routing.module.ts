@@ -18,8 +18,8 @@ const routes: Routes = [
   {path: 'homework/lab02', component:Lab02Component},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-
-  {path:'lab01/:productID',component:DetailProductsComponent},
+ 
+  {path:'homework/lab01/detail-product/:productId',component:DetailProductsComponent},
   { path:'lab02/:id', component: DetailStudentComponent},
 
   {path:'wrongpath', component:WrongpathComponent},

@@ -24,7 +24,7 @@ export class Lab01Component implements OnInit {
       available: "Mar 19, 2016",
       price: "19.95",
       starRating: "0.61",
-      imageURL: "../assets/images/leaf-rake.jpg"
+      imageURL: "../assets/image/pr1.jpg"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export class Lab01Component implements OnInit {
       available: "Mar 18, 2016",
       price: "32.99",
       starRating: "0.801",
-      imageURL: "../assets/images/garden-cart.jpg"
+      imageURL: "../assets/image/pr2.jpg"
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export class Lab01Component implements OnInit {
       available: "Mar 21, 2016",
       price: "8.99",
       starRating: "0.96",
-      imageURL: "../assets/images/hammer.jpg"
+      imageURL: "../assets/image/pr3.jpg"
     }
     ,
     {
@@ -52,7 +52,7 @@ export class Lab01Component implements OnInit {
       available: "Mar 15, 2016",
       price: "11.55",
       starRating: "0.78",
-      imageURL: "../assets/images/saw.jpg"
+      imageURL: "../assets/image/pr4.jpg"
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ export class Lab01Component implements OnInit {
       available: "Oct 15, 2015",
       price: "35.95",
       starRating: "0.9",
-      imageURL: "../assets/images/video-game-controller.jpg"
+      imageURL: "../assets/image/pr5.jpg"
     }
   ]
 
