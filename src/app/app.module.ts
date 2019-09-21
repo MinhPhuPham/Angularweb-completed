@@ -8,8 +8,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavMainComponent } from './nav-main/nav-main.component';
-import { FooterComponent } from './footer/footer.component';
 import { ShoppingHomeComponent } from './shopping-home/shopping-home.component';
 import { WrongpathComponent } from './wrongpath/wrongpath.component';
 import { Lab01Component } from './homework/lab01/lab01.component';
@@ -21,12 +19,19 @@ import { DetailStudentComponent } from './homework/lab02/detail-student/detail-s
 import { Lab03Component } from './homework/lab03/lab03.component';
 import { PageShoppingComponent } from './homework/lab03/page-shopping/page-shopping.component';
 import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.component';
+import { HomeComponent } from './home/home.component';
+import { ConntactComponent } from './social/conntact/conntact.component';
+import { AboutWebComponent } from './social/about-web/about-web.component';
+import { ContributeComponent } from './social/contribute/contribute.component';
+import { HomeHeaderComponent } from './_layout/home-header/home-header.component';
+import { HomeLayoutComponent } from './_layout/home-layout/home-layout.component';
+import { SiteHeaderComponent } from './_layout/site-header/site-header.component';
+import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
+import { SiteFooterComponent } from './_layout/site-footer/site-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMainComponent,
-    FooterComponent,
     ShoppingHomeComponent,
     WrongpathComponent,
     Lab01Component,
@@ -37,7 +42,16 @@ import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.compo
     DetailStudentComponent,
     Lab03Component,
     PageShoppingComponent,
-    DetailProComponent
+    DetailProComponent,
+    HomeComponent,
+    ConntactComponent,
+    AboutWebComponent,
+    ContributeComponent,
+    HomeHeaderComponent,
+    HomeLayoutComponent,
+    SiteHeaderComponent,
+    SiteLayoutComponent,
+    SiteFooterComponent
   ],
   imports: [
     BrowserModule,

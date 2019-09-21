@@ -9,6 +9,7 @@ import {product} from '../product'
   styleUrls: ['./detail-products.component.css']
 })
 export class DetailProductsComponent implements OnInit {
+  static filter: any;
 
   constructor(private route: ActivatedRoute) { }
   product
