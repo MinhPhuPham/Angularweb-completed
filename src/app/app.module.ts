@@ -5,6 +5,8 @@ import { RatingModule } from 'ng-starrating';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {HttpClientModule} from '@angular/common/http';
+import {RecordsService} from './records.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,13 +58,14 @@ import { SiteFooterComponent } from './_layout/site-footer/site-footer.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RatingModule,
     Ng2SearchPipeModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [RecordsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
