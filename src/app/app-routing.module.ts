@@ -20,12 +20,19 @@ import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.compo
 import { DetailProductsComponent } from './homework/lab01/detail-products/detail-products.component';
 import { DetailStudentComponent } from './homework/lab02/detail-student/detail-student.component';
 
-
-import { HomeHeaderComponent } from './_layout/home-header/home-header.component';
 import { HomeLayoutComponent } from './_layout/home-layout/home-layout.component';
-import { SiteHeaderComponent } from './_layout/site-header/site-header.component';
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
-import { SiteFooterComponent } from './_layout/site-footer/site-footer.component';
+
+
+import { HomepageComponent } from './assignment/homepage/homepage.component';
+import { IntroduceComponent } from './assignment/introduce/introduce.component';
+import { ContactComponent } from './assignment/contact/contact.component';
+import { QAComponent } from './assignment/qa/qa.component';
+import { LoginPageComponent } from './assignment/login-page/login-page.component';
+import { RegisterPageComponent } from './assignment/register-page/register-page.component';
+import { ListSubjectsComponent } from './assignment/list-subjects/list-subjects.component';
+import { ExaminationComponent } from './assignment/examination/examination.component';
+import { AssiLayoutComponent } from './_layout/assi-layout/assi-layout.component';
 
 
 const routes: Routes = [
@@ -56,8 +63,20 @@ const routes: Routes = [
       {path:'register',component:RegisterComponent},    
     ]
 },
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent},
+  {
+    path: '',
+    component: AssiLayoutComponent,
+    children: [
+      {path:'homepage',component:HomepageComponent},
+      {path: 'intro',component:IntroduceComponent},
+      {path:'contact-page',component:ContactComponent},
+      {path: 'Q&A',component:QAComponent},
+      {path: 'listsubject',component:ListSubjectsComponent},
+      {path: 'exam',component:ExaminationComponent},
+      {path: 'loginpage',component:LoginPageComponent},
+      {path: 'registerpage',component:RegisterPageComponent}
+    ]
+  },
   {path:'wrongpath', component:WrongpathComponent},
   {path:'**', redirectTo: 'wrongpath',pathMatch:'full'}
 ];

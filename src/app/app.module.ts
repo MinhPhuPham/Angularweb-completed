@@ -30,6 +30,16 @@ import { HomeLayoutComponent } from './_layout/home-layout/home-layout.component
 import { SiteHeaderComponent } from './_layout/site-header/site-header.component';
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
 import { SiteFooterComponent } from './_layout/site-footer/site-footer.component';
+import { HomepageComponent } from './assignment/homepage/homepage.component';
+import { IntroduceComponent } from './assignment/introduce/introduce.component';
+import { ContactComponent } from './assignment/contact/contact.component';
+import { QAComponent } from './assignment/qa/qa.component';
+import { LoginPageComponent } from './assignment/login-page/login-page.component';
+import { RegisterPageComponent } from './assignment/register-page/register-page.component';
+import { ListSubjectsComponent } from './assignment/list-subjects/list-subjects.component';
+import { ExaminationComponent } from './assignment/examination/examination.component';
+import { AssiHeaderComponent } from './_layout/assi-header/assi-header.component';
+import { AssiLayoutComponent } from './_layout/assi-layout/assi-layout.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +63,17 @@ import { SiteFooterComponent } from './_layout/site-footer/site-footer.component
     HomeLayoutComponent,
     SiteHeaderComponent,
     SiteLayoutComponent,
-    SiteFooterComponent
+    SiteFooterComponent,
+    HomepageComponent,
+    IntroduceComponent,
+    ContactComponent,
+    QAComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
+    ListSubjectsComponent,
+    ExaminationComponent,
+    AssiHeaderComponent,
+    AssiLayoutComponent
   ],
   imports: [
     BrowserModule,
