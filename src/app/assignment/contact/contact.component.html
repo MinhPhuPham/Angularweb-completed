@@ -12,13 +12,15 @@
         <div class="row">
             <div class="col-md-8 py-5" style="background-color: #eee;">
                 <div class="well well-sm">
-                    <form>
+                    <form class="needs-validation" novalidate >
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">
                                     Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                             <div class="form-group">
                                 <label for="email">
@@ -27,6 +29,8 @@
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                     </span>
                                     <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">
@@ -37,6 +41,8 @@
                                     <option value="suggestions">Suggestions</option>
                                     <option value="product">Product Support</option>
                                 </select>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -45,6 +51,8 @@
                                     Message</label>
                                 <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
                                     placeholder="Message"></textarea>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>    
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -74,4 +82,25 @@
             </div>
         </div>
     </div>
+    <script>
+            // Disable form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+            </script>
+            
     
