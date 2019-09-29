@@ -28,7 +28,7 @@
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                        <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                                        <p><img class=" img-fluid" [src]="subjects.Logo" alt="card image"></p>
                                         <h4 class="card-title">{{subjects.Name}}</h4>
                                         <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                     </div>
@@ -83,11 +83,12 @@
     </section>
     <!-- Team -->                        
         </div>
-        <div class="col-md-2">  
-                <table class="table table-bordered">
+        <div class="col-md-2">
+            <div style="position: sticky; top:0; z-index: 1">
+                <table mdbTable mdbTableScroll scrollY="true" maxHeight="1000" bordered="true">
                         <thead>
                             <tr>
-                                <th class="bg-warning"><i class="fas fa-list-alt"></i> List Of Subject</th>
+                                <th class="bg-warning"><i class="fas fa-list-alt" style="position: sticky"></i> List Of Subject</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -97,7 +98,38 @@
                     
                         </tbody>
                     </table>
+                </div>  
         </div>
     </div>
     
 </div>
+<script>
+$( document ).ready(function() {
+  console.log( "document ready!" );
+
+  var $sticky = $('.sticky');
+  var $stickyrStopper = $('.sticky-stopper');
+  if (!!$sticky.offset()) { // make sure ".sticky" element exists
+
+    var generalSidebarHeight = $sticky.innerHeight();
+    var stickyTop = $sticky.offset().top;
+    var stickOffset = 0;
+    var stickyStopperPosition = $stickyrStopper.offset().top;
+    var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
+    var diff = stopPoint + stickOffset;
+
+    $(window).scroll(function(){ // scroll event
+      var windowTop = $(window).scrollTop(); // returns number
+
+      if (stopPoint < windowTop) {
+          $sticky.css({ position: 'absolute', top: diff });
+      } else if (stickyTop < windowTop+stickOffset) {
+          $sticky.css({ position: 'fixed', top: stickOffset });
+      } else {
+          $sticky.css({position: 'absolute', top: 'initial'});
+      }
+    });
+
+  }
+});
+</script>

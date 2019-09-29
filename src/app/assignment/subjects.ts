@@ -2,101 +2,101 @@ export const subjects = [
     {
         "Id": "ADAV",
         "Name": "Lập trình Android nâng cao",
-        "Logo": "ADAV.jpg"
+        "Logo": "assets/image/logos/ADAV.jpg"
     },
     {
         "Id": "ADBS",
         "Name": "Lập trình Android cơ bản",
-        "Logo": "ADBS.jpg"
+        "Logo": "assets/image/logos/ADBS.jpg"
     },
     {
         "Id": "ADTE",
         "Name": "Kiểm thử và triển khai ứng dụng Android",
-        "Logo": "ADTE.jpg"
+        "Logo": "assets/image/logos/ADTE.jpg"
     },
     {
         "Id": "ADUI",
         "Name": "Thiết kế giao diện trên Android",
-        "Logo": "ADUI.jpg"
+        "Logo": "assets/image/logos/ADUI.jpg"
     },
     {
         "Id": "ASNE",
         "Name": "Lập trình ASP.NET",
-        "Logo": "ASNE.png"
+        "Logo": "assets/image/logos/ASNE.png"
     },
     {
         "Id": "CLCO",
         "Name": "Điện toán đám mây",
-        "Logo": "CLCO.jpg"
+        "Logo": "assets/image/logos/CLCO.jpg"
     },
     {
         "Id": "DBAV",
         "Name": "SQL Server",
-        "Logo": "DBAV.png"
+        "Logo": "assets/image/logos/DBAV.png"
     },
     {
         "Id": "DBBS",
         "Name": "Cơ sở dữ liệu",
-        "Logo": "DBBS.png"
+        "Logo": "assets/image/logos/DBBS.png"
     },
     {
         "Id": "GAME",
         "Name": "Lập trình game 2D",
-        "Logo": "GAME.png"
+        "Logo": "assets/image/logos/GAME.png"
     },
     {
         "Id": "HTCS",
         "Name": "HTML5 và CSS3",
-        "Logo": "HTCS.jpg"
+        "Logo": "assets/image/logos/HTCS.jpg"
     },
     {
         "Id": "INMA",
         "Name": "Internet Marketing",
-        "Logo": "INMA.jpg"
+        "Logo": "assets/image/logos/INMA.jpg"
     },
     {
         "Id": "JAAV",
         "Name": "Lập trình Java nâng cao",
-        "Logo": "JAAV.png"
+        "Logo": "assets/image/logos/JAAV.png"
     },
     {
         "Id": "JABS",
         "Name": "Lập trình hướng đối tượng với Java",
-        "Logo": "JABS.png"
+        "Logo": "assets/image/logos/JABS.png"
     },
     {
         "Id": "JSPR",
         "Name": "Lập trình JavaScript",
-        "Logo": "JSPR.png"
+        "Logo": "assets/image/logos/JSPR.png"
     },
     {
         "Id": "LAYO",
         "Name": "Thiết kế layout",
-        "Logo": "LAYO.jpg"
+        "Logo": "assets/image/logos/LAYO.jpg"
     },
     {
         "Id": "MOWE",
         "Name": "Thiết kế web cho điện thoại di động",
-        "Logo": "MOWE.png"
+        "Logo": "assets/image/logos/MOWE.png"
     },
     {
         "Id": "PHPP",
         "Name": "Lập trình PHP",
-        "Logo": "PHPP.png"
+        "Logo": "assets/image/logos/PHPP.png"
     },
     {
         "Id": "PMAG",
         "Name": "Quản lý dự án với Agile",
-        "Logo": "PMAG.jpg"
+        "Logo": "assets/image/logos/PMAG.jpg"
     },
     {
         "Id": "VBPR",
         "Name": "Lập trình VB.NET",
-        "Logo": "VBPR.png"
+        "Logo": "assets/image/logos/VBPR.png"
     },
     {
         "Id": "WEBU",
         "Name": "Xây dựng trang web",
-        "Logo": "WEBU.jpg"
+        "Logo": "assets/image/logos/WEBU.jpg"
     }
 ]

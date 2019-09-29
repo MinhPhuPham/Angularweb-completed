@@ -78,44 +78,10 @@
                                 <th class="bg-warning"><i class="fas fa-list-alt"></i> List Of Subject</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>BIG DATA & ANALYTICS</td>
-                            </tr>
-                            <tr>
-                                <td>PYTHON TECHNOLOGIES</td>
-                            </tr>
-                            <tr>
-                                <td>WEB DEVELOPMENT</td>
-                            </tr>
-                            <tr>
-                                <td>DATABASES</td>
-                            </tr>
-                            <tr>
-                                <td>DIGITAL MARKETING</td>
-                            </tr>
-                            <tr>
-                                <td>COMPUTER SCIENCE</td>
-                            </tr>
-                            <tr>
-                                <td>SCRIPTS</td>
-                            </tr>
-                            <tr>
-                                <td>MACHINE LEARNING</td>
-                            </tr>
-                            <tr>
-                                <td>MANAGEMENT</td>
-                            </tr>
-                            <tr>
-                                <td>MOBILE DEVELOPMENT</td>
-                            </tr>
-                            <tr>
-                                <td>COMPUTER PROGRAMMING</td>
-                            </tr>
-                            <tr>
-                                <td>MICROSOFT TECHNOLOGIES</td>
-                            </tr>
-                    
+                        <tbody >
+                           <tr *ngFor='let subjects of listSubjects'>
+                             <td>{{subjects.Name}}</td>
+                           </tr>
                         </tbody>
                     </table>
         </div>

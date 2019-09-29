@@ -1,0 +1,11 @@
+.nav-link{
+    display: block;
+    height: 80px;
+}
+.ver-line {
+    border-left: 1px solid black;
+    height: 500px;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
