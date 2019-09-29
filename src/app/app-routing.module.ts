@@ -33,6 +33,7 @@ import { RegisterPageComponent } from './assignment/register-page/register-page.
 import { ListSubjectsComponent } from './assignment/list-subjects/list-subjects.component';
 import { ExaminationComponent } from './assignment/examination/examination.component';
 import { AssiLayoutComponent } from './_layout/assi-layout/assi-layout.component';
+import { UserAssComponent } from './assignment/user-ass/user-ass.component';
 
 
 const routes: Routes = [
@@ -74,7 +75,8 @@ const routes: Routes = [
       {path: 'listsubject',component:ListSubjectsComponent},
       {path: 'exam',component:ExaminationComponent},
       {path: 'loginpage',component:LoginPageComponent},
-      {path: 'registerpage',component:RegisterPageComponent}
+      {path: 'registerpage',component:RegisterPageComponent},
+      {path: 'user-ass', component:UserAssComponent}
     ]
   },
   {path:'wrongpath', component:WrongpathComponent},
@@ -87,6 +89,6 @@ const routes: Routes = [
        scrollPositionRestoration: 'top'
     })
 ], 
-exports: [RouterModule]
+exports: [RouterModule] 
 })
 export class AppRoutingModule { }

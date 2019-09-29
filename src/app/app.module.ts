@@ -40,6 +40,7 @@ import { ListSubjectsComponent } from './assignment/list-subjects/list-subjects.
 import { ExaminationComponent } from './assignment/examination/examination.component';
 import { AssiHeaderComponent } from './_layout/assi-header/assi-header.component';
 import { AssiLayoutComponent } from './_layout/assi-layout/assi-layout.component';
+import { UserAssComponent } from './assignment/user-ass/user-ass.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { AssiLayoutComponent } from './_layout/assi-layout/assi-layout.component
     ListSubjectsComponent,
     ExaminationComponent,
     AssiHeaderComponent,
-    AssiLayoutComponent
+    AssiLayoutComponent,
+    UserAssComponent
   ],
   imports: [
     BrowserModule,
