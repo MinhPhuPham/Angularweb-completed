@@ -22,3 +22,6 @@ header,
 .view {
     height: 100%;
 }
+#fix-nav{
+    height: 25px;
+}
