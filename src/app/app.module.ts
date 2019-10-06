@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DetailStudentComponent } from './homework/lab02/detail-student/detail-student.component';
 import { Lab03Component } from './homework/lab03/lab03.component';
+import { Lab05Component } from './homework/lab05/lab05.component';
+
 import { PageShoppingComponent } from './homework/lab03/page-shopping/page-shopping.component';
 import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.component';
 import { HomeComponent } from './home/home.component';
@@ -75,7 +77,8 @@ import { UserAssComponent } from './assignment/user-ass/user-ass.component';
     ExaminationComponent,
     AssiHeaderComponent,
     AssiLayoutComponent,
-    UserAssComponent
+    UserAssComponent,
+    Lab05Component,
   ],
   imports: [
     BrowserModule,
