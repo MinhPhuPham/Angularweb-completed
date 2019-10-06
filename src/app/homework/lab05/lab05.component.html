@@ -1,14 +1,264 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-dark sticky-top justify-content-center">
-    <a class="navbar-brand" href="#">Logo</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-    </ul>
-  </nav>
+   <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/" routerLink='/'>MP Page</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink='/'>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-offset="90">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects" data-offset="90">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<!-- Ex 1.1 -->
+<br>
 <div class="container">
-    ABCAcs
+    <h2 class="text-center"><b>Perimeter and area</b></h2>
+    <form class="form-group mt-5">
+        <div class="form-group">
+            <label for="long">Long :</label>
+            <input type="text" id="long" [(ngModel)]="long" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Enter long">
+        </div>
+        <div class="form-group">
+            <label for="wide">Wide :</label>
+            <input type="text" id="wide" [(ngModel)]="wide" [ngModelOptions]="{standalone: true}"   class="form-control" placeholder="Enter wide">
+        </div>
+        <div class="form-group">
+            <label for="area">Area(S) :</label>
+            <input type="text" id="area" disabled class="form-control" [(ngModel)]="area" [ngModelOptions]="{standalone: true}"  placeholder="Enter wide">
+        </div>
+        <div class="form-group">
+            <label for="p">(P) :</label>
+            <input type="text" id="p" disabled [(ngModel)]="p" [ngModelOptions]="{standalone: true}"  class="form-control" placeholder="Enter wide">
+        </div>
+
+        <div>
+            <button class="btn btn-primary" (click)="caculate()">Caculated</button>
+        </div>
+    </form>
+    
+<hr style="color: gray">
+</div>
+<!-- Ex1.1 -->
+
+<!-- Ex1.2 -->
+<div class="container">
+    
+        <h2 class="text-center"><b>Student Imformation</b></h2>
+
+        <form  (ngSubmit)="onSubmit()"  >
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="name" class="form-control" [(ngModel)]="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" id="birthday" name="name" class="form-control" [(ngModel)]="birthday" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                        <select class="form-control" name="gender" [(ngModel)]="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="mark">Mark</label>
+                    <input type="text" class="form-control" name="mark" [(ngModel)]="mark" id="mark" required>
+                </div>
+            
+                <div class="result" *ngIf="errs.length > 0">
+                    <div class="errs" *ngFor="let err of errs">
+                        <div class="alert alert-danger">{{err}}</div>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label>Result</label>
+                    <div class="alert" [ngClass]="{'alert-danger': result === 'Failed', 'alert-success': result === 'Passed'}" *ngIf="result !== ''">{{result}}!</div>
+                </div>
+                
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+            <hr style="color: gray">
+    </div>
+<!-- Ex1.2 -->
+<!-- EX 2 -->
+<br>
+<div class="container">
+    
+        <h2 class="text-center"><b>Reward of Salary</b></h2>
+<div class="card ">
+        <div class="card-header bg-light">TET HOLIDAY REWARDS</div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="wretangle">Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="nv.name" [ngModelOptions]="{standalone: true}">
+                    <label for="wretangle">Salary</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" [(ngModel)]="nv.salary"
+                            [ngModelOptions]="{standalone: true}">
+                        <div class="input-group-append">
+                            <span class="input-group-text">VND</span>
+                        </div>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="radio1">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Female"
+                            [(ngModel)]="nv.gender" checked>Female
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="radio2">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Male"
+                            [(ngModel)]="nv.gender">Male
+                        </label>
+                    </div>
+                    <br>
+                    <label for="wretangle">Age</label>
+                        <select class="form-control" id="sel1" name="sellist1" [(ngModel)]="nv.rate">
+                        <option *ngFor="let t of data" value="{{t.rate}}">{{t.age}}</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">REWARDS {{reward()}} VNĐ</div>
+    </div>
+    <hr style="color: gray">
 </div>  
+<!-- EX 2 -->
+<!-- Ex 3 -->
+<div class="container">
+    
+        <h2 class="text-center"><b>Sell Drinks</b></h2>
+        <div class="card" style="margin-top: 15px">
+                <div class="card-header">
+                        SELL of Soft Drinks
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <th style="margin-left: 50px">Name</th>
+                            <th>Quantity</th> 
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of listproducts">
+                                <td>
+                                        <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox"  class="form-check-input"  [(ngModel)]='item.checked'>
+                                                </label>
+                                        </div>
+                                        {{item.name}}
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control" max="1000" min="0" [(ngModel)]="item.amount"
+                                            [ngModelOptions]="{standalone: true}" [disabled]="!item.checked"> 
+                                    </td>
+                                    <td>{{item.price | currency : 'USD'}}</td>
+                                    <td>{{item.amount * item.price | currency : 'USD'}}</td>
+                            </tr>
+                        </tbody>
+            
+                    </table>
+        </div>
+            
+        <div class="card-footer">
+                Total: {{ Total() | currency:"USD"}}
+        </div>       
+        
+<hr style="color: gray" > 
+</div>
+<!-- Ex 3 -->
+
+<br>
+<!-- Ex 4 -->
+<div class="container">
+    
+        <h2 class="text-center"><b>Reward of TET holiday</b></h2>
+        <div class="card" style=" margin-top: 15px">
+                <div class="card-header">
+                  Calculating reward for TET
+                </div>
+                <div class="card-body">
+                    <form  (ngSubmit)="onSubmit()"  >
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="name" class="form-control" [(ngModel)]="name" required (input)="onChangeName()">
+                            <div class="alert alert-danger alert-sm" *ngIf="name === '' || !name">Name is Required</div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="salary">Salary</label>
+                            <input type="text" id="salary" name="salary" class="form-control" [(ngModel)]="salary" (input)="onChangeSalary()">
+                            <div class="alert alert-danger alert-sm" *ngIf="!salary">Salary is Required</div>
+                            <div class="alert alert-danger alert-sm" *ngIf="salary && salary <= 2000000">Salary has than 2 Milion</div>
+                            <div class="alert alert-danger alert-sm" *ngIf="salary && !isSalary">Salary is a Number</div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="fullName">Gender</label>
+                            <div class="input-group">
+                                <input type="radio"  name="gender" (change)="onChangeGender(1)">
+                                <label class="ml-3" for="">Male</label>
+                                <input type="radio" class="ml-5" name="gender"  (change)="onChangeGender(0)"> 
+                                <label class="ml-3" for="">Female</label>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="gender">Group Age</label>
+                                <select class="form-control" name="group-age" [(ngModel)]="groupAge">
+                                    <option value="1">Under 25 Years old</option>
+                                    <option value="2">25 - 40 Years old</option>
+                                    <option value="3">Above 40 Years old</option>
+                                </select>
+                            </div>
+                    </form>
+                    <div class="alert alert-success" *ngIf="salary > 2000000 && groupAge && gender">
+                        Success
+                    </div>
+                </div>
+            
+                <div class="card-footer">
+                    REWARD: 
+                    <span *ngIf="!salary">{{ 0 | currency:"VND"}}</span>
+                    <span *ngIf="salary && !groupAge">{{ salary | currency:"VND" }}</span>
+                    <span *ngIf="groupAge === '1'">{{ salary * 1.7 | currency:"VND" }}</span>
+                    <span *ngIf="groupAge === '2'">{{ salary * 2 | currency:"VND" }}</span>
+                    <span *ngIf="groupAge === '3'">{{ salary * 2.5 | currency:"VND" }}</span>
+                </div>
+              </div>
+</div>
+<!-- Ex 4 -->
+<script>
+ // MDB Lightbox Init
+ $(function () {
+            $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+        });
+
+        // Adding animations to the sections
+        $("section").addClass("wow fadeIn");
+
+        // Animations Init
+        new WOW().init();
+</script>
