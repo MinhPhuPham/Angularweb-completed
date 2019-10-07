@@ -43,6 +43,7 @@ import { ExaminationComponent } from './assignment/examination/examination.compo
 import { AssiHeaderComponent } from './_layout/assi-header/assi-header.component';
 import { AssiLayoutComponent } from './_layout/assi-layout/assi-layout.component';
 import { UserAssComponent } from './assignment/user-ass/user-ass.component';
+import { Lab06Component } from './homework/lab06/lab06.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { UserAssComponent } from './assignment/user-ass/user-ass.component';
     AssiLayoutComponent,
     UserAssComponent,
     Lab05Component,
+    Lab06Component,
   ],
   imports: [
     BrowserModule,

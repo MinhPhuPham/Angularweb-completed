@@ -20,6 +20,7 @@ import { DetailProComponent } from './homework/lab03/detail-pro/detail-pro.compo
 import { DetailProductsComponent } from './homework/lab01/detail-products/detail-products.component';
 import { DetailStudentComponent } from './homework/lab02/detail-student/detail-student.component';
 import { Lab05Component } from './homework/lab05/lab05.component';
+import { Lab06Component } from './homework/lab06/lab06.component';
 
 import { HomeLayoutComponent } from './_layout/home-layout/home-layout.component';
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
@@ -56,6 +57,8 @@ const routes: Routes = [
       {path: 'homework/lab02', component:Lab02Component},
       {path: 'homework/lab03', component:Lab03Component},
       {path:'homework/lab05', component:Lab05Component},
+      {path:'homework/lab06', component:Lab06Component},
+      
       {path:'homework/lab03/page_shopping',component:PageShoppingComponent},
      
       {path:'homework/lab01/detail-product/:productId',component:DetailProductsComponent},
