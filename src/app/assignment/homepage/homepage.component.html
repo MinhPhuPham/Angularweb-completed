@@ -15,9 +15,9 @@
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
             <div class="view">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+              <img class="d-block w-100" src="assets/image/topfer1.jpg"
                 alt="First slide">
-              <div class="mask rgba-black-light"></div>
+              <div class="mask rgba-black-slight"></div>
             </div>
             <div class="carousel-caption">
               <h3 class="h3-responsive">Light mask</h3>
@@ -72,18 +72,20 @@
         </div>
         <!-- / .Div col-10 -->
         <div class="col-md-2">
-                <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th class="bg-warning"><i class="fas fa-list-alt"></i> List Of Subject</th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                           <tr *ngFor='let subjects of listSubjects'>
-                             <td>{{subjects.Name}}</td>
-                           </tr>
-                        </tbody>
-                    </table>
+            <div class="table-responsive">
+                <table class="table table-fixed">
+                    <thead>
+                        <tr>
+                            <th class="bg-warning"><i class="fas fa-list-alt"></i> List Of Subject</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                       <tr *ngFor='let subjects of listSubjects'>
+                         <td>{{subjects.Name}}</td>
+                       </tr>
+                    </tbody>
+                </table>
+            </div><!-- End -->
         </div>
     </div> 
     <!-- /Div-row -->

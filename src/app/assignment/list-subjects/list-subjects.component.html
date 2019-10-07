@@ -8,6 +8,7 @@
 <section id="team" class="pb-5">
         <div class="container">
             <h5 class="section-title h1">OUR SUBJECT</h5>
+        <hr>    
             <div class="row">
                 <div class="col-md-8">
                     <p>Sort By:</p>
@@ -22,7 +23,7 @@
             <hr>
                 <!-- Team member -->
                <div class="row">
-                <div class=" col-xs-12 col-sm-6 col-md-4" *ngFor='let subjects of listSubjects | filter:searchText | paginate: config' id="searchTextResults">
+                <div class=" col-xs-12 col-sm-6 col-md-4" [title]="subjects.Name" *ngFor='let subjects of listSubjects | filter:searchText | paginate: config' id="searchTextResults">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');" >
                         <div class="mainflip" >
                             <div class="frontside">
@@ -92,19 +93,20 @@
         </div>
         <div class="col-md-2">
             <div style="position: sticky; top:0; z-index: 1">
-                <table mdbTable mdbTableScroll scrollY="true" maxHeight="1000" bordered="true">
-                        <thead>
-                            <tr>
-                                <th class="bg-warning"><i class="fas fa-list-alt" style="position: sticky"></i> List Of Subject</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor='let subjects of listSubjects'>
-                                <td >{{subjects.Name}}</td>
-                            </tr>
-                    
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                            <table class="table table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-warning"><i class="fas fa-list-alt"></i> List Of Subject</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                   <tr *ngFor='let subjects of listSubjects'>
+                                     <td>{{subjects.Name}}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- End -->
                 </div>  
         </div>
     </div>
